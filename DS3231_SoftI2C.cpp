@@ -175,6 +175,14 @@ void DateTime::println(Stream &s) const
     s.println(str);
 }
 
+String DateTime::toString() const
+{
+    const uint8_t strLen = 20;
+    char str[strLen] = {0};
+    getDateTimeStr(this, str, strLen);
+    return String(str);
+}
+
 bool DateTime::operator==(const DateTime& that) const
 {
     return secondstime() == that.secondstime();

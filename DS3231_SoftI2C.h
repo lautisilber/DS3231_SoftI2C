@@ -52,6 +52,7 @@ public:
     void println() const;
     void print(Stream &s) const;
     void println(Stream &s) const;
+    String toString() const;
 
     bool operator==(const DateTime& that) const;
     bool operator!=(const DateTime& that) const;
