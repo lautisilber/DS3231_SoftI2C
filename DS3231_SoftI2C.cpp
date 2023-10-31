@@ -199,15 +199,15 @@ bool DateTime::operator<(const DateTime& that) const
 }
 bool DateTime::operator>(const DateTime& that) const
 {
-    return !operator<(that);
+    return secondstime() > that.secondstime();
 }
 bool DateTime::operator<=(const DateTime& that) const
 {
-    return operator<(that) || operator==(that);
+    return secondstime() <= that.secondstime();
 }
 bool DateTime::operator>=(const DateTime& that) const
 {
-    return !operator<=(that);   
+    return secondstime() >= that.secondstime();  
 }
 /************************/
 
